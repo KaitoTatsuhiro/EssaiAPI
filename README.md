@@ -33,27 +33,20 @@ Le serveur renvoie un message d’erreur via le JSON suivant :
     "message": "La méthode n'est pas autorisée"
 }
 code 400 : Bad Request
-L’un des champs obligatoires n’est pas rempli. Le serveur renvoie un message d’erreur via le JSON suivant :
+Le serveur renvoie un message d’erreur via le JSON suivant :
+{
+    "message": "Corps de requête invalide ou absent"
+}
+
+code 400 : Bad Request
+Les champs obligatoire ne sont pas remplis. Le serveur renvoie un message d’erreur via le JSON suivant :
 {
     "message": "Veuillez remplir tous les champs obligatoires"
 }
-
-code 400 : Bad Request
-L’email rentré n’est pas au bon format. Le serveur renvoie un message d’erreur via le JSON suivant :
+code 404 : Bad Request
+Manque l'utilisateur avec cet id. Le serveur renvoie un message d’erreur via le JSON suivant :
 {
-    "message": "Votre email n’est pas au bon format"
-}
-code 400 : Bad Request
-Le mot de passe fait moins de 8 caractères. Le serveur renvoie un message d’erreur via le JSON suivant :
-{
-    "message": "Le mot de passe doit contenir au moins 8 caractères"
-}
-
-
-code 409 : Conflict
-Le pseudo ou l’email sont déjà utilisés par un autre utilisateur enregistré. Le serveur renvoie un message d’erreur via le JSON suivant :
-{
-    "message": "Ce Pseudo et/ou cet Email est déjà pris"
+    "message": "aucun utilisateur pour cet id"
 }
 
 code 500 : Internal Server Error

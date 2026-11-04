@@ -56,7 +56,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST'){
         $data = findByID($pdo, $id);
         if(!$data){
             http_response_code(404);
-            echo(json_encode(['code' => 404, 'message' => 'aucun utilisateur pour cet id, ce mail ou ce pseudo']));
+            echo(json_encode(['code' => 404, 'message' => 'aucun utilisateur pour cet id']));
             exit;
         }
         //Envoyer le message de réponse
